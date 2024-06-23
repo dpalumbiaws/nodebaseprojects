@@ -15,6 +15,6 @@ jobs:
 
       - name: Pull Changes on Computer B
         run: |
-          ssh ubuntu@ec2-18-223-158-194.us-east-2.compute.amazonaws.com "cd /home/ubuntu/nodeprojects/nodebaseprojects &&   git pull origin main"
+          ssh root@ec2-18-223-158-194.us-east-2.compute.amazonaws.com "cd /home/ubuntu/nodeprojects/nodebaseprojects &&   git pull origin main"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
