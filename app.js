@@ -8,7 +8,7 @@ import transactionRoutes from "./routes/transactionRoutes.js";
 import countryRoutes from "./routes/countryRoutes.js";
 import walletRoutes from "./routes/walletRoutes.js";
 import path from 'path'
-// prueba123
+// prueba1 1
 dotenv.config();
 connectDB();
 
