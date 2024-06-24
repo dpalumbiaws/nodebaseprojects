@@ -8,7 +8,7 @@ import transactionRoutes from "./routes/transactionRoutes.js";
 import countryRoutes from "./routes/countryRoutes.js";
 import walletRoutes from "./routes/walletRoutes.js";
 import path from 'path'
-/// buenasssaaa
+
 dotenv.config();
 connectDB();
 
