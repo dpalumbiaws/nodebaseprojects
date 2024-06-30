@@ -12,6 +12,6 @@ router.post('/forgot-password', forgotPassword);
 router.get('/verify/:token', verifyEmail);
 
 // Ruta protegida para obtener el perfil del usuario
-router.get('/profile', authMiddleware, profile);
+router.get('/profile/:id', authMiddleware, profile); // Modificado para incluir el parámetro de ID
 
 export default router;
