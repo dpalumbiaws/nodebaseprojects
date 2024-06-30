@@ -1,5 +1,5 @@
 // controllers/profileController.js
-import { User } from '../models/index.js'; // Ajusta la importación según tu estructura de archivos
+import { User } from '../models/User.js'; // Ajusta la importación según tu estructura de archivos
 
 const profile = async (req, res) => {
   const userId = req.params.id; // Obtener el ID de usuario desde los parámetros de la URL
