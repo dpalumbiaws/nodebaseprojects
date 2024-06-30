@@ -1,7 +1,7 @@
 // controllers/authController.js
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { User } from '../models/index.js';
+import { User } from '../models/User.js';
 import transporter from '../config/nodemailer-config.js';
 
 const signup = async (req, res) => {
