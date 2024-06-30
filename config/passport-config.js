@@ -2,7 +2,7 @@
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import bcrypt from 'bcryptjs';
-import { User } from '../models/index.js'; // Ajusta la importación según tu estructura de archivos
+import { User } from '../models/User.js'; // Ajusta la importación según tu estructura de archivos
 
 passport.use(new LocalStrategy({
   usernameField: 'email',
