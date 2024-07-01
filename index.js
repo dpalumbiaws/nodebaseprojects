@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 
 // Rutas
-app.use('/auth', userRoutes);
+app.use('/api', userRoutes);
 
 // Sincronizar base de datos y arrancar el servidor
 sequelize.sync({ force: false }).then(() => {
