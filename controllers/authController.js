@@ -19,10 +19,10 @@ const signup = async (req, res) => {
 
     user = await User.create({ username, email, password: hashedPassword });
 
-    const token = jwt.sign({ userId: user.id }, 'jwt_secret_key', { expiresIn: '1h' });
+    const token = jwt.sign({ user: user }, 'jwt_secret_key', { expiresIn: '1h' });
 
     const mailOptions = {
-      from: 'tucorreo@gmail.com',
+      from: 'dpalumbiaws@gmail.com',
       to: email,
       subject: 'Verifica tu cuenta',
       html: `
