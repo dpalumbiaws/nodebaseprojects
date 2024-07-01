@@ -56,7 +56,7 @@ const login = (req, res, next) => {
         return res.status(500).json({ message: 'Error interno del servidor' });
       }
 
-      const token = jwt.sign({ userId: user.id }, 'jwt_secret_key', { expiresIn: '1h' });
+      const token = jwt.sign({ user: user}, 'jwt_secret_key', { expiresIn: '1h' });
       return res.json({ token });
     });
   })(req, res, next);
