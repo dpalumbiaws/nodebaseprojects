@@ -116,10 +116,26 @@ const verifyEmail = async (req, res) => {
     res.status(500).json({ message: 'Error interno del servidor' });
   }
 };
+export const resetPassword = async (req, res) => {
+  const { token } = req.params;
+  const { newPassword } = req.body;
 
+  try {
+    const decoded = jwt.verify(token, 'jwt_secret_key');
+
+    // Aquí puedes implementar la lógica para actualizar la contraseña del usuario
+    // Puedes usar el ID del usuario obtenido de decoded.userId y newPassword
+
+    res.json({ message: 'Contraseña actualizada exitosamente' });
+  } catch (err) {
+    console.error('Error al resetear la contraseña:', err);
+    res.status(400).json({ message: 'El token no es válido o ha expirado' });
+  }
+};
 export {
   signup,
   login,
   forgotPassword,
-  verifyEmail
+  verifyEmail,
+  resetPassword
 };
