@@ -28,7 +28,7 @@ const signup = async (req, res) => {
       html: `
         <p>¡Gracias por registrarte en nuestra aplicación!</p>
         <p>Por favor, haz click en el siguiente enlace para verificar tu cuenta:</p>
-        <a href="http://api.baseproject.org:3000/verify/${token}">Verificar cuenta</a>
+        <a href="http://api.baseproject.org:3000/api/verify/${token}">Verificar cuenta</a>
       `
     };
 
@@ -81,7 +81,7 @@ const forgotPassword = async (req, res) => {
       html: `
         <p>¡Hola ${user.username}!</p>
         <p>Has solicitado recuperar tu contraseña. Haz click en el siguiente enlace para cambiar tu contraseña:</p>
-        <a href="http://api.baseproject.org:3000/reset-password/${token}">Cambiar Contraseña</a>
+        <a href="http://api.baseproject.org:3000/api/reset-password/${token}">Cambiar Contraseña</a>
       `
     };
 
@@ -104,7 +104,7 @@ const verifyEmail = async (req, res) => {
     let user = await User.findByPk(userId);
 
     if (!user) {
-      return res.status(404).json({ message: 'Usuario no encontrado' });
+      return res.status(404).json({ message: 'Usuario no encontrado',decoded: decoded});
     }
 
     user.isVerified = true;
