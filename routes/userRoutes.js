@@ -11,7 +11,6 @@ router.post('/login', login);
 router.post('/forgot-password', forgotPassword);
 router.get('/verify/:token', verifyEmail);
 router.post('/reset-password/:token', resetPassword);
-
 // Ruta protegida para obtener el perfil del usuario
 router.get('/profile/:id', authMiddleware, profile); // Modificado para incluir el parámetro de ID
 
