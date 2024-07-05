@@ -22,7 +22,7 @@ const signup = async (req, res) => {
     const token = jwt.sign({ user: user }, 'jwt_secret_key', { expiresIn: '1h' });
 
     const mailOptions = {
-      from: 'dpalumbiaws@gmail.com',
+      from: 'account@baseproject.org',
       to: email,
       subject: 'Verifica tu cuenta',
       html: `
