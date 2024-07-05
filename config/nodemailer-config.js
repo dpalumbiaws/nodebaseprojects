@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
   secure: false, 
   //service: 'email-smtp.us-east-2.amazonaws.com',
   auth: {
-    user: 'account@baseproject.org',
-    pass: '16944615*Dd'
+    user: 'AKIA2LA2STXDQRM3NPF2',
+    pass: 'BBX2/jXUGW+yOm+tdpUFNhPRf/g7Somcczhj4AY33/LM'
   }
 });
 
