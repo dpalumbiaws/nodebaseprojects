@@ -99,7 +99,7 @@ const verifyEmail = async (req, res) => {
 
   try {
     const decoded = jwt.verify(token, 'jwt_secret_key');
-    const userId = decoded.userId;
+    const userId = decoded.id;
 
     let user = await User.findByPk(userId);
 
