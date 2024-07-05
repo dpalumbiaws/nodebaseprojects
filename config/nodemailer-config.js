@@ -3,10 +3,10 @@ import nodemailer from 'nodemailer';
 
 // Configuración básica de Nodemailer
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'baseproject.org',
   auth: {
-    user: 'dpalumbiaws@gmail.com',
-    pass: 'Dd16944615*/'
+    user: 'account@baseproject.org',
+    pass: '16944615*Dd'
   }
 });
 
