@@ -116,7 +116,7 @@ const verifyEmail = async (req, res) => {
     res.status(500).json({ message: 'Error interno del servidor' });
   }
 };
-export const resetPassword = async (req, res) => {
+ const resetPassword = async (req, res) => {
   const { token } = req.params;
   const { newPassword } = req.body;
 
