@@ -21,7 +21,7 @@ jobs:
       - name: Add server to known_hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H 18.223.158.194 >> ~/.ssh/known_hosts
+          ssh-keyscan -H 3.136.176.207 >> ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
 
       - name: Test SSH connection
