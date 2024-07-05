@@ -26,5 +26,5 @@ jobs:
 
       - name: Test SSH connection
         run: |
-          ssh ubuntu@18.223.158.194 "cd /home/ubuntu/nodeprojects/nodebaseprojects &&   sudo git pull origin main"
+          ssh ubuntu@3.136.176.207 "cd /home/ubuntu/nodeprojects/nodebaseprojects &&   sudo git pull origin main"
 
