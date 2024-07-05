@@ -28,7 +28,7 @@ const signup = async (req, res) => {
       html: `
         <p>¡Gracias por registrarte en nuestra aplicación!</p>
         <p>Por favor, haz click en el siguiente enlace para verificar tu cuenta:</p>
-        <a href="http://localhost:3000/verify/${token}">Verificar cuenta</a>
+        <a href="http://api.baseproject.org:3000/verify/${token}">Verificar cuenta</a>
       `
     };
 
@@ -75,13 +75,13 @@ const forgotPassword = async (req, res) => {
     const token = jwt.sign({ userId: user.id }, 'jwt_secret_key', { expiresIn: '1h' });
 
     const mailOptions = {
-      from: 'tucorreo@gmail.com',
+      from: 'account@baseproject.org',
       to: email,
       subject: 'Recuperación de Contraseña',
       html: `
         <p>¡Hola ${user.username}!</p>
         <p>Has solicitado recuperar tu contraseña. Haz click en el siguiente enlace para cambiar tu contraseña:</p>
-        <a href="http://localhost:3000/reset-password/${token}">Cambiar Contraseña</a>
+        <a href="http://api.baseproject.org:3000/reset-password/${token}">Cambiar Contraseña</a>
       `
     };
 
