@@ -113,7 +113,7 @@ const verifyEmail = async (req, res) => {
     res.json({ message: 'Cuenta verificada exitosamente' });
   } catch (err) {
     console.error('Error al verificar cuenta:', err);
-    res.status(500).json({ message: 'Error interno del servidor' });
+    res.status(500).json({ message: 'Error interno del servidor',errmsj:err });
   }
 };
  const resetPassword = async (req, res) => {
