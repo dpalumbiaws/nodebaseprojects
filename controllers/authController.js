@@ -109,7 +109,6 @@ const verifyEmail = async (req, res) => {
 
     user.isVerified = true;
     await user.save();
-
     res.json({ message: 'Cuenta verificada exitosamente' });
   } catch (err) {
     console.error('Error al verificar cuenta:', err);
